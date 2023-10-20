@@ -3,5 +3,12 @@
   "extends": [
     "github>rwunderer/renovate",
     "regexManagers:dockerfileVersions"
+  ],
+
+  "packageRules": [
+    "matchPackageNames": ["hcloud/cli"],
+    "addLabels": [
+      "renovate_build"
+    ]
   ]
 }

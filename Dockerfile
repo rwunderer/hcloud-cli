@@ -6,7 +6,7 @@ ARG ARCH=amd64
 
 WORKDIR /tmp
 
-RUN wget https://github.com/hetznercloud/cli/releases/download/v${HCLOUD_VERSION}/hcloud-linux-${ARCH}.tar.gz && \
+RUN wget https://github.com/hetznercloud/cli/releases/download/${HCLOUD_VERSION}/hcloud-linux-${ARCH}.tar.gz && \
     tar xzf hcloud-linux-${ARCH}.tar.gz hcloud && \
     install hcloud /bin && \
     rm hcloud-linux-${ARCH}.tar.gz hcloud
