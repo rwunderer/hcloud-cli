@@ -6,6 +6,8 @@ name: Auto-Tag
 # documentation.
 
 on:
+  push:
+    branches: [ "main" ]
   pull_request:
     types: [ "closed" ]
 
@@ -18,9 +20,9 @@ env:
 
 jobs:
   update_tag:
-    if: >-
-      github.event.pull_request.merged == true &&
-      contains(github.event.pull_request.labels.*.name, 'renovate_publish')
+    # if: >-
+    #   github.event.pull_request.merged == true &&
+    #   contains(github.event.pull_request.labels.*.name, 'renovate_publish')
 
     runs-on: ubuntu-latest
     permissions:
