@@ -37,5 +37,5 @@ jobs:
           GITHUB_TOKEN: "${{ secrets.TAGGING_TOKEN }}"
         with:
           strategy: regex
-          root: "/Dockerfile"
+          root: "Dockerfile"
           regex_pattern: "HCLOUD_VERSION=(v\\d+\\.\\d+\\.\\d+)"
