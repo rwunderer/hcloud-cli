@@ -3,12 +3,5 @@
   "extends": [
     "github>rwunderer/renovate",
     "regexManagers:dockerfileVersions"
-  ],
-
-  "regexManagers": [
-    {
-      "description": "Update hcloud cli version",
-      "fileMatch": ["(^|/|\\.)Dockerfile$", "(^|/)Dockerfile\\.[^/]*$"]
-    }
   ]
 }
