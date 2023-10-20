@@ -1,7 +1,7 @@
 FROM busybox:v1.36.1@sha256:3fbc632167424a6d997e74f52b878d7cc478225cffac6bc977eedfe51c7f4e79
 
-# renovate: datasource=github-releases depName=hcloud/cli lookupName=hetznercloud/cli
-ARG HCLOUD_VERSION=v1.38.2
+# renovate: datasource=github-releases depName=hcloud-cli lookupName=hetznercloud/cli
+ARG HCLOUD_VERSION=v1.38.3
 ARG ARCH=amd64
 
 WORKDIR /tmp
