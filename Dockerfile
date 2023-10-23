@@ -1,7 +1,7 @@
 #-------------------
 # Download hcloud
 #-------------------
-FROM busybox:v1.36.1@sha256:3fbc632167424a6d997e74f52b878d7cc478225cffac6bc977eedfe51c7f4e79 as builder
+FROM alpine:3.8.5@sha256:2bb501e6173d9d006e56de5bce2720eb06396803300fe1687b58a7ff32bf4c14 as builder
 
 # renovate: datasource=github-releases depName=hcloud-cli lookupName=hetznercloud/cli
 ARG HCLOUD_VERSION=v1.38.3
@@ -11,11 +11,14 @@ ARG TARGETVARIANT
 
 WORKDIR /tmp
 
-#RUN wget https://github.com/hetznercloud/cli/releases/download/${HCLOUD_VERSION}/hcloud-${TARGETOS}-${TARGETARCH}${TARGETVARIANT}.tar.gz && \
-#    tar xzf hcloud-${TARGETOS}-${TARGETARCH}${TARGETVARIANT}.tar.gz hcloud && \
-#    install hcloud /bin && \
-#    rm hcloud-${TARGETOS}-${TARGETARCH}${TARGETVARIANT}.tar.gz hcloud
-RUN touch /bin/hcloud
+RUN apk --no-cache add --upgrade \
+    curl
+
+RUN IMAGE=hcloud-${TARGETOS}-${TARGETARCH}${TARGETVARIANT}.tar.gz && \
+    curl -SsL -o ${IMAGE} https://github.com/hetznercloud/cli/releases/download/${HCLOUD_VERSION}/${IMAGE} && \
+    tar xzf ${IMAGE} hcloud && \
+    install hcloud /bin && \
+    rm ${IMAGE} hcloud
 
 #-------------------
 # Minimal image
