@@ -23,7 +23,7 @@ RUN IMAGE=hcloud-${TARGETOS}-${TARGETARCH}${TARGETVARIANT}.tar.gz && \
 #-------------------
 # Minimal image
 #-------------------
-FROM gcr.io/distroless/static-debian12@sha256:0c3d36f317d6335831765546ece49b60ad35933250dc14f43f0fd1402450532e as hcloud-cli-minimal
+FROM gcr.io/distroless/static-debian12:nonroot@sha256:43a5ce527e9def017827d69bed472fb40f4aaf7fe88c356b23556a21499b1c04 as hcloud-cli-minimal
 
 COPY --from=builder /bin/hcloud /bin/hcloud
 
@@ -32,7 +32,7 @@ ENTRYPOINT ["/bin/hcloud"]
 #-------------------
 # Debug image
 #-------------------
-FROM gcr.io/distroless/static-debian12:debug@sha256:fab2e9501d6f4748474dc64d58225bca9508cb0c6f8b3a45fee7d633afd87c1a as hcloud-cli-debug
+FROM gcr.io/distroless/static-debian12:debug-nonroot@sha256:12f9bf5f9955ae90e619520e58eeba839a7ec959e051a62a780de447f38d65ed as hcloud-cli-debug
 
 COPY --from=builder /bin/hcloud /bin/hcloud
 
