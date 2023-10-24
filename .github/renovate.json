@@ -7,7 +7,7 @@
 
   "packageRules": [
     {
-      "matchPackageNames": ["hcloud/cli"],
+      "matchPackageNames": ["hcloud-cli"],
       "addLabels": [
         "renovate_publish"
       ]
