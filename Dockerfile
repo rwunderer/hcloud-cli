@@ -32,7 +32,7 @@ ENTRYPOINT ["/bin/hcloud"]
 #-------------------
 # Debug image
 #-------------------
-FROM gcr.io/distroless/static-debian12:debug-nonroot@sha256:12f9bf5f9955ae90e619520e58eeba839a7ec959e051a62a780de447f38d65ed as hcloud-cli-debug
+FROM gcr.io/distroless/static-debian12:debug-nonroot@sha256:283ec33d746317939550b136d10e9fa57389ef6f02046b947b69ec0e81d9b88b as hcloud-cli-debug
 
 COPY --from=builder /bin/hcloud /bin/hcloud
 
