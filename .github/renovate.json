@@ -9,6 +9,7 @@
   "packageRules": [
     {
       "matchPackageNames": ["hcloud-cli"],
+      "automerge": true,
       "addLabels": [
         "renovate_publish"
       ]
