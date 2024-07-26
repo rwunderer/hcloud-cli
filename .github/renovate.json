@@ -12,6 +12,7 @@
         "hcloud-cli"
       ],
       "automerge": true,
+      "automergeType": "pr",
       "addLabels": [
         "renovate_publish"
       ]
