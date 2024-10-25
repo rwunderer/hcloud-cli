@@ -4,7 +4,7 @@
 FROM alpine:3.20.3@sha256:beefdbd8a1da6d2915566fde36db9db0b524eb737fc57cd1367effd16dc0d06d as builder
 
 # renovate: datasource=github-releases depName=hcloud-cli lookupName=hetznercloud/cli
-ARG HCLOUD_VERSION=v1.47.0
+ARG HCLOUD_VERSION=v1.48.0
 ARG TARGETARCH
 ARG TARGETOS
 ARG TARGETVARIANT
