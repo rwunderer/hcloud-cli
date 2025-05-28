@@ -1,6 +1,8 @@
 [![GitHub license](https://img.shields.io/github/license/rwunderer/hcloud-cli.svg)](https://github.com/rwunderer/hcloud-cli/blob/main/LICENSE)
 <a href="https://renovatebot.com"><img alt="Renovate enabled" src="https://img.shields.io/badge/renovate-enabled-brightgreen.svg?style=flat-square"></a>
 
+***As a contribution to [unplug Trump](https://www.kuketz-blog.de/unplugtrump-mach-dich-digital-unabhaengig-von-trump-und-big-tech/) this repository has moved to [codeberg](https://codeberg.org/capercode/hcloud-cli).***
+
 # hcloud-cli
 Minimal Docker image with [Hetzner cli utility](https://github.com/hetznercloud/cli)
 
